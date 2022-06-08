@@ -21,7 +21,7 @@ Project ini merupakan sebuah proyek kerjasama antara PT Rekaindo Global Jasa (PT
  
  - [Nico Subhan ](https://www.github.com/octokatherine) [- Politeknik Elektronika Negeri Surabaya (PENS)](shorturl.at/lHKO9)
  - [Rifqy ](https://www.github.com/octokatherine) [- Politeknik Elektronika Negeri Surabaya (PENS)](shorturl.at/lHKO9)
- - [Anindya Zahra'ul Jasmine ](https://www.github.com/octokatherine) [- Politeknik Negeri Semarang (Polines)](shorturl.at/fNQ57)
+ - [Anindya Zahra'ul Jasmine ](https://www.github.com/nindya-jasmine) [- Politeknik Negeri Semarang (Polines)](shorturl.at/fNQ57)
  - [Benny Hartanto Setiyadi ](https://linktr.ee/setiyadi_ben) [- Politeknik Negeri Semarang (Polines)](shorturl.at/fNQ57)
  - [Bunga Allysah Gardenia ](https://www.github.com/octokatherine) [- Politeknik Negeri Semarang (Polines)](shorturl.at/fNQ57)
  - [Tsaniya Affadanisa ](https://www.github.com/octokatherine) [- Politeknik Negeri Semarang (Polines)](shorturl.at/fNQ57)
