@@ -107,64 +107,56 @@ Item {
 
     Row {
         id: row
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
+        x: 134
+        y: 599
+        width: 1104
+        height: 70
         anchors.bottom: parent.bottom
-        anchors.bottomMargin: 40
-        anchors.topMargin: 597
-        anchors.leftMargin: 0
-        anchors.rightMargin: 0
-        padding: 110
-        leftPadding: 10
-        topPadding: 10
-        layoutDirection: Qt.RightToLeft
-        spacing: 20
+        spacing: 25
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.bottomMargin: 51
 
         MenuButton {
-            id: btnIntroduksi
+            id: btnPengenalan
             text: qsTr("Introduksi")
-            anchors.right: parent.right
-            anchors.rightMargin: 110
+            btnIconSource: "../../images/open-book.png"
             isActiveMenu: true
         }
 
         MenuButton {
             id: btnSkematik
             text: qsTr("Skematik")
-            anchors.right: btnIntroduksi.left
-            anchors.rightMargin: 20
+            btnIconSource: "../../images/drawing.png"
             isActiveMenu: true
         }
 
         MenuButton {
             id: btnLayout
             text: qsTr("Layout")
-            anchors.right: btnSkematik.left
-            anchors.rightMargin: 20
+            btnIconSource: "../../images/layout.png"
             isActiveMenu: true
         }
 
         MenuButton {
             id: btnMonitoring
             text: qsTr("Monitoring")
-            anchors.right: btnLayout.left
-            anchors.rightMargin: 20
+            btnIconSource: "../../images/speedometer.png"
             isActiveMenu: true
         }
 
         MenuButton {
             id: btnControl
             text: qsTr("Control")
-            anchors.right: btnMonitoring.left
-            anchors.rightMargin: 20
+            btnIconSource: "../../images/options.png"
             isActiveMenu: true
         }
     }
 }
 
+
+
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.5}D{i:10}D{i:11}D{i:12}D{i:13}D{i:14}D{i:9}
+    D{i:0;formeditorZoom:0.75}D{i:10}D{i:11}D{i:12}D{i:13}D{i:14}D{i:9}
 }
 ##^##*/
