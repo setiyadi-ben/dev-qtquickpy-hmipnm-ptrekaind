@@ -59,6 +59,7 @@ diantaranya :
 
 2. Langkah selanjutnya adalah instalasi **Phyton**, download dari situs 
 resminya di [sini.](https://www.python.org/downloads/)
+
 ![App Screenshot](https://www.dataquest.io/wp-content/uploads/2022/01/python-installer-img4.webp)
 
 3. Masuk ke command prompt (CMD) dan ketikkan perintah berikut :
@@ -66,15 +67,18 @@ resminya di [sini.](https://www.python.org/downloads/)
   pip install PySide2
 ```
 4. Unduh aplikasi Qt Creator 5.12 di [sini.](https://www.qt.io/offline-installers)
+
 ![App Screenshot](https://i.ibb.co/ByRQ43D/installer-offline-qt.png)
 
 5. Sambil menunggu proses download selesai silahkan daftar akun
 Qt terlebih dahulu, ini diperlukan untuk melakukan autentikasi
 saat melakukan proses instalasi berlangsung nanti.
+
 ![App Screenshot](https://i.ibb.co/vHQMhPJ/regis-qt.png)
 
-6. Pastikan untuk mencentang semua pilihan yang ada di saat instalasi.
-Ini diperlukan untuk menghindari erorr saat instalasi.
+6. Pastikan untuk mencentang semua pilihan yang ada di saat instalasi. Ini diperlukan
+untuk menghindari error saat instalasi.
+
 ![App Screenshot](https://i.ibb.co/N9Bj0TJ/install-option-qt.png)
 
 ## Running Tests
@@ -87,15 +91,17 @@ Aplikasi Qt Creator.
 dan pilih **"Qt Quick Application"**.
 ![App Screenshot](https://i.ibb.co/hLYh0LL/getting-started-qt-phyton.png)
 
-2. Namailah nama project kalian dan pilih lokasi yang akan dipilih.
-Yang digaris kotak merupakan opsional kalian bisa centang bilan lokasi
-folder akan dijadikan default.
+2. Namailah nama project kalian dan pilih lokasi yang akan dipilih. Yang digaris kotak merupakan
+opsional karena itu merupakan set default direktori project.
+
 ![App Screenshot](https://i.ibb.co/5sT7v0V/create-name-file.png)
 
 Kalian bisa pilih diantara ini, bebas :
+
 ![App Screenshot](https://i.ibb.co/jgzXJs1/pyside2-choose.png)
 
 Klik finish
+
 ![App Screenshot](https://i.ibb.co/jMBBBLn/done.png)
 
 3. Setelah itu masuk ke menu **project** yang ada di sebelah kiri. Pastikan 
@@ -105,7 +111,7 @@ untuk interpreternya terpilih **Phyton 3.10**.
 4. Kemudian masuk ke menu **Design** dan pastekan kode tersebut di text
 editor.
 
-```sh
+```javascript
 import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQml 2.3 //class yg dibutuhkan untuk QtObject
@@ -187,3 +193,34 @@ Window {
     
   </tr>
 </table>
+
+## Lessons Learned
+
+What did you learn while building this project? What challenges did you face and how did you overcome them?
+
+
+## FAQ
+
+#### Kenapa penjelasan mengenai program di dalam repo tidak dijelaskan?
+
+Karena di repo ini hanya sebagai dokumentasi pekerjaan yang telah dilakukan saat melakukan
+magang di PT Rekaindo Global Jasa (PT REKA). Misalkan ikut di dokumentasikan disini, akan
+menghambat proses developing program ini dikarenakan **Saya buat dari 0, "create from scratch"**.
+
+#### Apakah ada rencana untuk membuat tutorial dengan Bahasa Indonesia?
+
+Sudah sempat dipikirkan, setelah ada waktu dan tempat yang memadai Kalian bisa pantau melalui
+[playlist ini.]()
+
+#### Dimana tempat untuk mempelajari project yang semisal dengan ini?
+
+Untuk sumber belajar Saya dapatkan berawal dari beberapa Channel di YouTube, diantaranya ini :
+
+[![youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/playlist?list=PLfQ7GQSrl0_v1T4Pe_NW4GLaynBfydFy-)
+[![youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/playlist?list=PL6CJYn40gN6hdNC1IGQZfVI707dh9DPRc)
+
+
+
+## 🔗 Find out More (Single Links)
+[![linktree](https://img.shields.io/badge/linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/setiyadi_ben)
+
