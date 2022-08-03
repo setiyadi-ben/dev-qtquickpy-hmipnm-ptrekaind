@@ -7,6 +7,7 @@ import "../control" //import folder qml untuk kustom button
 import "../pages/windowPage" //import halaman swipeview
 
 Item {
+    id: item1
 //    id: item
 ////    width: 1280
 ////    height: 720
@@ -21,7 +22,7 @@ Item {
             id: image
             opacity: 1
             anchors.fill: parent
-            source: "../../images/kai_rail_background.jpg"
+            source: "../../images/SUBMENU.png"
             fillMode: Image.PreserveAspectCrop
         }
 //    }
@@ -168,7 +169,7 @@ Item {
 
         MenuButton {
             id: btnMonitoring
-            text: qsTr("Monitoring")
+            text: qsTr("Test Tableview")
             btnIconSource: "../../images/speedometer.png"
             isActiveMenu: false
             onClicked: {
@@ -177,7 +178,7 @@ Item {
                 btnLayout.isActiveMenu = false
                 btnMonitoring.isActiveMenu = true
                 btnControl.isActiveMenu = false
-                stackView.push(Qt.resolvedUrl("../control/componentTest.qml"))
+                stackView.push(Qt.resolvedUrl("../pages/windowPage/tableView.qml"))
 
             }
         }
@@ -199,22 +200,86 @@ Item {
         }
 
 
-//    StackView {
-//        visible: true
-//        id: stackView
-//        anchors.fill: parent
-//        focusPolicy: Qt.NoFocus
-//        anchors.rightMargin: 120
-//        clip: true
-//        anchors.bottomMargin: 140
-//        anchors.leftMargin: 120
-//        anchors.topMargin: 140
+        //    StackView {
+        //        visible: true
+        //        id: stackView
+        //        anchors.fill: parent
+        //        focusPolicy: Qt.NoFocus
+        //        anchors.rightMargin: 120
+        //        clip: true
+        //        anchors.bottomMargin: 140
+        //        anchors.leftMargin: 120
+        //        anchors.topMargin: 140
 
-//        MouseArea{
-//            //untuk membuat buttonclickable
-//        }
+        //        MouseArea{
+        //            //untuk membuat buttonclickable
+        //        }
         
 
+    }
+
+    Text {
+        id: textJudul
+        width: 688
+        height: 117
+        text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:9.75pt; font-weight:400; font-style:normal;\">\n<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:36pt; font-weight:600;\">Modul Pembelajaran</span></p>\n<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Montserrat'; font-size:72pt; font-weight:600; font-style:italic; text-decoration: underline;\">Rail Brake System</span></p></body></html>"
+        anchors.verticalCenter: parent.verticalCenter
+        font.pixelSize: 24
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+        textFormat: Text.RichText
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+
+    Rectangle {
+        id: rectangle
+        width: 350
+        height: 80
+        opacity: 1
+        color: "#ffffff"
+        radius: 30
+        anchors.right: parent.right
+        anchors.top: parent.top
+        anchors.rightMargin: 20
+        Image {
+            id: pnm
+            width: 82
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            source: "../../images/Logo Politeknik Negeri Madiun.png"
+            fillMode: Image.PreserveAspectFit
+            anchors.bottomMargin: 10
+            anchors.leftMargin: 20
+            anchors.topMargin: 10
+        }
+
+        Image {
+            id: inka
+            width: 100
+            anchors.left: pnm.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            source: "../../images/logo-inka-border-putih.png"
+            fillMode: Image.PreserveAspectFit
+            anchors.bottomMargin: 0
+            anchors.leftMargin: 3
+            anchors.topMargin: 0
+        }
+
+        Image {
+            id: reka
+            width: 100
+            anchors.left: inka.right
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            source: "../../images/Logo-Reka-1000.png"
+            fillMode: Image.PreserveAspectFit
+            anchors.bottomMargin: 0
+            anchors.leftMargin: 20
+            anchors.topMargin: 0
+        }
+        anchors.topMargin: 35
     }
 
 //    Rectangle {
@@ -279,6 +344,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.66;height:720;width:1280}
+    D{i:0;formeditorZoom:0.5;height:720;width:1280}
 }
 ##^##*/

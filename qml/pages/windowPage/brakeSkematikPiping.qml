@@ -15,7 +15,7 @@ Item {
         Text {
             id: textJudul
             color: "#ffffff"
-            text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Rockwell Extra Bold','SolidWorks GDT','Segoe UI Black'; font-size:28pt; font-weight:600; color:#ffffff;\">Layout Skematik | Knorr</span></p></body></html>"
+            text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Rockwell Extra Bold','SolidWorks GDT','Segoe UI Black'; font-size:28pt; font-weight:600; color:#ffffff;\">Layout Skematik | Piping Brake</span></p></body></html>"
             anchors.left: parent.left
             anchors.top: parent.top
             font.pixelSize: 12
@@ -30,7 +30,6 @@ Item {
 
     Rectangle {
         id: rectangleBox
-        color: "#cfcfcf"
         radius: 10
         anchors.left: parent.left
         anchors.right: parent.right
@@ -41,10 +40,11 @@ Item {
         anchors.bottomMargin: 150
         anchors.topMargin: 90
 
+
         WebView {
             id: webview
             anchors.fill: parent
-            url: "https://drive.google.com/file/d/1h7uLedrhu80M5rU4rbawd7HSE5CIvL-U/view"
+            url: "https://drive.google.com/file/d/17EzerQYC2stQvvTq4cVV2FOnNgC6dMW9/view"
             anchors.bottomMargin: 15
             anchors.rightMargin: 15
             anchors.leftMargin: 15
@@ -141,7 +141,7 @@ Item {
         btnIconSource: "../../../images/drawing.png"
         anchors.bottomMargin: 40
         anchors.rightMargin: 40
-        isActiveMenu: true
+        isActiveMenu: false
         onClicked: {
             btnSkematikPiping.isActiveMenu = false
             btnSkematikKnorr.isActiveMenu = true
@@ -160,7 +160,7 @@ Item {
         btnIconSource: "../../../images/drawing.png"
         anchors.bottomMargin: 40
         anchors.rightMargin: 40
-        isActiveMenu: false
+        isActiveMenu: true
         onClicked: {
             btnSkematikPiping.isActiveMenu = true
             btnSkematikKnorr.isActiveMenu = false
@@ -173,7 +173,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:0.9;height:720;width:1280}D{i:2}D{i:4}D{i:3}D{i:6}
-D{i:7}
+    D{i:0;autoSize:true;height:720;width:1280}
 }
 ##^##*/

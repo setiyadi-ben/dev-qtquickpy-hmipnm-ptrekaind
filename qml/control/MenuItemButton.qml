@@ -7,7 +7,7 @@ Button{
     id:btnleftMenu
     text: qsTr("Left Menu Text")
     property url btnIconSource: "../../images/svg_images/home.svg"
-    property color  btnColorDefault: "#1c1d20"
+    property color  btnColorDefault: "#cfcfcf"
     property color btnColorMouseOver: "#23272E"
     property color btnColorClicked: "#00a1f1"
     property int iconWidth: 150
@@ -64,10 +64,14 @@ Button{
         Image {
             id: iconBtn
             source: btnIconSource
-            anchors.rightMargin: 15
-            anchors.leftMargin: 15
-            anchors.bottomMargin: 15
-            anchors.topMargin: 15
+//            anchors.rightMargin: 15
+//            anchors.leftMargin: 15
+//            anchors.bottomMargin: 15
+//            anchors.topMargin: 15
+            anchors.rightMargin: 7.5
+            anchors.leftMargin: 7.5
+            anchors.bottomMargin: 7.5
+            anchors.topMargin: 7.5
             sourceSize.height: iconHeight
             sourceSize.width: iconWidth
             fillMode: Image.Stretch
@@ -98,6 +102,6 @@ Button{
 }
 /*##^##
 Designer {
-    D{i:0;autoSize:true}D{i:6}
+    D{i:0;autoSize:true;formeditorZoom:2}
 }
 ##^##*/

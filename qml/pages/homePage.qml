@@ -5,6 +5,7 @@ import QtGraphicalEffects 1.15 //Class yg dibutuhkan untuk DropShadow
 import QtQml 2.3 //class yg dibutuhkan untuk QtObject
 
 Item {
+    id: item1
 //    width: 1280
 //    height: 720
 //    anchors.fill: parent
@@ -18,22 +19,61 @@ Item {
             id: bgHome
             opacity: 1
             anchors.fill: parent
-            source: "../../images/Karir-4.jpg"
+            source: "../../images/HOMEPAGE.png"
+            //            source: "../../images/Karir-4.jpg"
             fillMode: Image.Stretch
         }
 
         Rectangle {
             id: rectangle
-            x: 771
-            width: 509
-            height: 105
+            width: 350
+            height: 80
             opacity: 1
             color: "#ffffff"
-            radius : 15
+            radius : 30
             anchors.right: parent.right
             anchors.top: parent.top
-            anchors.topMargin: 33
-            anchors.rightMargin: 0
+            anchors.rightMargin: 20
+            anchors.topMargin: 35
+
+            Image {
+                id: pnm
+                width: 82
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                source: "../../images/Logo Politeknik Negeri Madiun.png"
+                anchors.leftMargin: 20
+                anchors.bottomMargin: 10
+                anchors.topMargin: 10
+                fillMode: Image.PreserveAspectFit
+            }
+
+            Image {
+                id: inka
+                width: 100
+                anchors.left: pnm.right
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                source: "../../images/logo-inka-border-putih.png"
+                anchors.bottomMargin: 0
+                anchors.topMargin: 0
+                anchors.leftMargin: 3
+                fillMode: Image.PreserveAspectFit
+            }
+
+            Image {
+                id: reka
+                width: 100
+                anchors.left: inka.right
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                source: "../../images/Logo-Reka-1000.png"
+                anchors.bottomMargin: 0
+                anchors.topMargin: 0
+                anchors.leftMargin: 20
+                fillMode: Image.PreserveAspectFit
+            }
 
 //            Grid {
 //                id: grid
@@ -108,6 +148,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:0.75;height:720;width:1280}
+    D{i:0;autoSize:true;formeditorZoom:0.5;height:720;width:1280}
 }
 ##^##*/

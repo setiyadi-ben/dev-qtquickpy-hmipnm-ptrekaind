@@ -29,7 +29,7 @@ Item {
         btnIconSource: "../../../images/next.png"
         anchors.rightMargin: 20
         onClicked: {
-            stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-gardutraksi.qml"))
+            stackView.push(Qt.resolvedUrl("../../../qml/pages/detailPage/trafoArusAc.qml"))
         }
     }
 
@@ -42,7 +42,7 @@ Item {
         btnIconSource: "../../../images/go-back-arrow.png"
         anchors.rightMargin: 20
         onClicked: {
-            stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-gardutraksi.qml"))
+            stackView.push(Qt.resolvedUrl("../../../qml/pages/windowPage/garduIntroduksi.qml"))
         }
     }
 
@@ -62,7 +62,7 @@ Item {
 
         Text {
             id: textContext1
-            text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">ACB</span></p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p>\n<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Berfungsi sebagai pemutus dan penghubung rangkaian listrik. selain itu ACB juga memiliki kemampuan memutus secara</p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">otomatis saat dibebani dengan arus yang melebih kapasitas maksimal ACB tersebut.</p></body></html>"
+            text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:9.75pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600;\">Dswitch DC</span></p>\n<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:7.8pt;\"><br /></p>\n<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">Berfungsi sebagai pemutus dan penghubung rangkaian listrik. selain itu ACB juga memiliki kemampuan memutus secara</span></p>\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:7.8pt;\">otomatis saat dibebani dengan arus yang melebih kapasitas maksimal ACB tersebut.</span></p></body></html>"
             anchors.left: image1.right
             anchors.right: parent.right
             anchors.top: parent.top
@@ -112,7 +112,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:0.5;height:720;width:1280}D{i:3}D{i:4}D{i:6}D{i:7}
-D{i:8}D{i:5}
+    D{i:0;autoSize:true;formeditorZoom:0.5;height:720;width:1280}
 }
 ##^##*/

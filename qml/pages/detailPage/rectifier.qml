@@ -29,7 +29,7 @@ Item {
         btnIconSource: "../../../images/next.png"
         anchors.rightMargin: 20
         onClicked: {
-            stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-gardutraksi.qml"))
+            stackView.push(Qt.resolvedUrl("../../../qml/pages/detailPage/hscb.qml"))
         }
     }
 
@@ -42,7 +42,7 @@ Item {
         btnIconSource: "../../../images/go-back-arrow.png"
         anchors.rightMargin: 20
         onClicked: {
-            stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-gardutraksi.qml"))
+            stackView.push(Qt.resolvedUrl("../../../qml/pages/windowPage/garduIntroduksi.qml"))
         }
     }
 

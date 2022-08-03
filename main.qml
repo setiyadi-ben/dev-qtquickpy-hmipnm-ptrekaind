@@ -4,6 +4,7 @@ import QtQuick.Controls 2.3
 import QtGraphicalEffects 1.15 //Class yg dibutuhkan untuk DropShadow
 import QtQml 2.3 //class yg dibutuhkan untuk QtObject
 import "qml/control" //import folder qml untuk kustom button
+import QtQuick.Dialogs 1.3
 
 Window {
     id: mainWindow
@@ -275,6 +276,7 @@ Window {
                         anchors.right: parent.right
                         anchors.top: parent.top
                         anchors.bottom: parent.bottom
+                        clip: false
                         anchors.rightMargin: 0
                         btnIconSource: "images/log-file-format.png"
                         anchors.topMargin: 0
@@ -290,20 +292,19 @@ Window {
                             btnInfo.isActiveMenu = false
                             btnLogs.isActiveMenu = true
                             btnHome.isActiveMenu = false
-                            stackView.push(Qt.resolvedUrl("qml/pages/homePage.qml"))
+                            stackView.push(Qt.resolvedUrl("qml/pages/EventLogs.qml"))
                         }
                     }
 
                     HomeButton {
                         id: btnHome
-                        text: qsTr("Home")
+                        text: "Home"
                         anchors.right: btnLogs.left
-                        anchors.top: parent.top
-                        anchors.bottom: parent.bottom
+                        anchors.top: btnLogs.top
+                        anchors.bottom: btnLogs.bottom
                         anchors.rightMargin: 0
-                        display: AbstractButton.TextBesideIcon
-                        anchors.bottomMargin: 25
-                        anchors.topMargin: 25
+                        anchors.bottomMargin: 0
+                        anchors.topMargin: 0
                         btnIconSource: "images/svg_images/home.svg"
                         isActiveMenu: true
                         onClicked: {
@@ -391,7 +392,7 @@ Window {
                                 btnGarduTraksi.isActiveMenu = false
                                 btnInfo.isActiveMenu = false
                                 btnLogs.isActiveMenu = false
-                                stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
+                                stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-door.qml"))
 
                             }
                         }
@@ -410,7 +411,7 @@ Window {
                                 btnGarduTraksi.isActiveMenu = false
                                 btnInfo.isActiveMenu = false
                                 btnLogs.isActiveMenu = false
-                                stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
+                                stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-door.qml"))
 
                             }
                         }
@@ -430,7 +431,7 @@ Window {
                                  btnGarduTraksi.isActiveMenu = false
                                  btnInfo.isActiveMenu = false
                                  btnLogs.isActiveMenu = false
-                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
+                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-door.qml"))
 
                              }
                          }
@@ -448,7 +449,7 @@ Window {
                                  btnGarduTraksi.isActiveMenu = false
                                  btnInfo.isActiveMenu = false
                                  btnLogs.isActiveMenu = false
-                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
+                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-door.qml"))
 
                              }
                          }
@@ -547,15 +548,21 @@ Window {
                     anchors.leftMargin: 0
                     anchors.topMargin: 0
 
-                    Label {
+                    Text {
                         id: labelTopDescription1
                         color: "#c3cbdd"
-                        text: qsTr("Dibuat pada tahun 2022")
+                        text: "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }\n</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:7.8pt; font-weight:400; font-style:normal;\">\n<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Dibuat oleh Mahasiswa Magang bersama Karyawan PT Rekaindo Global Jasa.</p></body></html>"
+                        MouseArea {
+                            id: mouseArea
+                            anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                }
                         anchors.left: parent.left
                         anchors.right: parent.right
                         anchors.top: parent.top
                         anchors.bottom: parent.bottom
                         verticalAlignment: Text.AlignVCenter
+                        textFormat: Text.RichText
                         anchors.bottomMargin: 0
                         anchors.rightMargin: 30
                         anchors.topMargin: 0
@@ -678,11 +685,14 @@ Window {
             onActiveChanged: if (active) (mainWindow.startSystemResize(Qt.BottomEdge))
         }
     }
+    Connections{
+        target: backend
+    }
 }
 
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:3}D{i:17}
+    D{i:0;formeditorZoom:0.66}
 }
 ##^##*/

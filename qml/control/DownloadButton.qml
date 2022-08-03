@@ -5,14 +5,14 @@ import QtQml 2.3
 
 Button{
     id:btnleftMenu
-    text: qsTr("Left Menu Text")
+    text: qsTr("Download dalam PDF")
     antialiasing: true
-    property url btnIconSource: "../../images/svg_images/home.svg"
-    property color  btnColorDefault: "#1c1d20"
+    property url btnIconSource: "../../images/download-pdf.png"
+    property color  btnColorDefault: "#2AAFD3"
     property color btnColorMouseOver: "#23272E"
     property color btnColorClicked: "#00a1f1"
-    property int iconWidth: 20
-    property int iconHeight: 20
+    property int iconWidth: 35
+    property int iconHeight: 35
     property color activeMenuColor: "#55aaff"
     property color activeMenuColorRight: "#2c313c"
     property bool isActiveMenu: false
@@ -27,11 +27,13 @@ Button{
                                    }
     }
 
-    implicitWidth: 100
-    implicitHeight: 60
+    implicitWidth: 190
+    implicitHeight: 50
+
 
     background: Rectangle{
         id: bgBtn
+        radius: 10
         color: internal.dynamicColor
 
         Rectangle{
@@ -64,7 +66,7 @@ Button{
         Image {
             id: iconBtn
             source: btnIconSource
-            anchors.leftMargin: 18
+            anchors.leftMargin: 8
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
             sourceSize.height: iconHeight
@@ -97,6 +99,6 @@ Button{
 }
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:1.25;height:60;width:70}
+    D{i:0;autoSize:true}
 }
 ##^##*/

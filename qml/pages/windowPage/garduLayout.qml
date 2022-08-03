@@ -7,16 +7,13 @@ import QtGraphicalEffects 1.15 //Class yg dibutuhkan untuk DropShadow
 import QtQml 2.3 //class yg dibutuhkan untuk QtObject
 
 Item {
+    id: item1
     Image {
         id: image
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        source: "../../../images/modul_images/ex_layout_traksi.png"
-        anchors.rightMargin: 0
-        anchors.bottomMargin: 0
-        fillMode: Image.Stretch
+        anchors.verticalCenter: parent.verticalCenter
+        source: "../../../images/modul_images/layout_traksi.png"
+        anchors.horizontalCenter: parent.horizontalCenter
+        fillMode: Image.PreserveAspectFit
     }
 
     MenuButton {
@@ -32,4 +29,21 @@ Item {
         }
     }
 
+    CustomRoundButton {
+        x: 318
+        y: 156
+        width: 44
+        height: 42
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenterOffset: 476
+        anchors.verticalCenterOffset: -89
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+
 }
+
+/*##^##
+Designer {
+    D{i:0;autoSize:true;formeditorZoom:0.66;height:720;width:1280}D{i:3}
+}
+##^##*/

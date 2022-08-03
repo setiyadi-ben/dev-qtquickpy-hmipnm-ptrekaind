@@ -29,7 +29,7 @@ Item {
         btnIconSource: "../../../images/next.png"
         anchors.rightMargin: 20
         onClicked: {
-            stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-gardutraksi.qml"))
+            stackView.push(Qt.resolvedUrl("../../../qml/pages/detailPage/rectifier.qml"))
         }
     }
 
@@ -42,7 +42,7 @@ Item {
         btnIconSource: "../../../images/go-back-arrow.png"
         anchors.rightMargin: 20
         onClicked: {
-            stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-gardutraksi.qml"))
+            stackView.push(Qt.resolvedUrl("../../../qml/pages/windowPage/garduIntroduksi.qml"))
         }
     }
 
@@ -113,6 +113,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:0.66;height:720;width:1280}D{i:6}D{i:7}
+    D{i:0;autoSize:true;formeditorZoom:0.66;height:720;width:1280}
 }
 ##^##*/

@@ -1,8 +1,9 @@
-import QtQuick 2.0
+import QtQuick 2.15
 import "../../control"
+import "../../pages"
+import QtQuick.Controls 2.3
 
 Item {
-    id: item1
     Image {
         id: image
         anchors.fill: parent
@@ -23,6 +24,21 @@ Item {
         anchors.topMargin: 226
         clip: true
 
+    }
+
+    MenuButton {
+        id: btnBack
+        x: 1060
+        y: 620
+        text: qsTr("Kembali")
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        btnIconSource: "../../../images/go-back-arrow.png"
+        anchors.rightMargin: 20
+        anchors.bottomMargin: 40
+        onClicked: {
+            stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-brake.qml"))
+        }
     }
 
 }
