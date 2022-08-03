@@ -10,6 +10,7 @@ Window {
     width: 1280
     height: 720
 
+
     /*
       Pembatas lebar dan tinggi window yang dapat diresize
       Sc: Di video ke-8
@@ -215,7 +216,7 @@ Window {
                             //minimize
                             onClicked: {
                                 mainWindow.showMinimized()
-                                internal.restoreMargins()
+//                                stackView.restoreMargins()
                             }
 
                         }
@@ -224,7 +225,12 @@ Window {
                             id: btnMaximizRestore
                             btnIconSource: "images/svg_images/square.svg"
                             //maximize dan restore internal menyamakan QtObject
-                            onClicked: internal.maximizeRestore()
+                            onClicked: {
+
+                                internal.maximizeRestore()
+
+                            }
+
                         }
 
                         TopBarButton {
@@ -264,15 +270,41 @@ Window {
                         anchors.topMargin: 0
                     }
                     HomeButton {
-                        id: btnHome
-                        text: qsTr("")
+                        id: btnLogs
+                        text: qsTr("Logs")
                         anchors.right: parent.right
                         anchors.top: parent.top
                         anchors.bottom: parent.bottom
                         anchors.rightMargin: 0
-                        btnIconSource: "images/svg_images/home.svg"
+                        btnIconSource: "images/log-file-format.png"
                         anchors.topMargin: 0
                         anchors.bottomMargin: 0
+                        isActiveMenu: false
+                        onClicked: {
+                            btnVibrasi.isActiveMenu = false
+                            btnDoor.isActiveMenu = false
+                            btnLightning.isActiveMenu = false
+                            btnAC.isActiveMenu = false
+                            btnBrake.isActiveMenu = false
+                            btnGarduTraksi.isActiveMenu = false
+                            btnInfo.isActiveMenu = false
+                            btnLogs.isActiveMenu = true
+                            btnHome.isActiveMenu = false
+                            stackView.push(Qt.resolvedUrl("qml/pages/homePage.qml"))
+                        }
+                    }
+
+                    HomeButton {
+                        id: btnHome
+                        text: qsTr("Home")
+                        anchors.right: btnLogs.left
+                        anchors.top: parent.top
+                        anchors.bottom: parent.bottom
+                        anchors.rightMargin: 0
+                        display: AbstractButton.TextBesideIcon
+                        anchors.bottomMargin: 25
+                        anchors.topMargin: 25
+                        btnIconSource: "images/svg_images/home.svg"
                         isActiveMenu: true
                         onClicked: {
                             btnVibrasi.isActiveMenu = false
@@ -282,6 +314,7 @@ Window {
                             btnBrake.isActiveMenu = false
                             btnGarduTraksi.isActiveMenu = false
                             btnInfo.isActiveMenu = false
+                            btnLogs.isActiveMenu = false
                             btnHome.isActiveMenu = true
                             stackView.push(Qt.resolvedUrl("qml/pages/homePage.qml"))
                         }
@@ -357,7 +390,7 @@ Window {
                                 btnBrake.isActiveMenu = false
                                 btnGarduTraksi.isActiveMenu = false
                                 btnInfo.isActiveMenu = false
-                                btnHome.isActiveMenu = false
+                                btnLogs.isActiveMenu = false
                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
 
                             }
@@ -376,7 +409,7 @@ Window {
                                 btnBrake.isActiveMenu = false
                                 btnGarduTraksi.isActiveMenu = false
                                 btnInfo.isActiveMenu = false
-                                btnHome.isActiveMenu = false
+                                btnLogs.isActiveMenu = false
                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
 
                             }
@@ -396,7 +429,7 @@ Window {
                                  btnBrake.isActiveMenu = false
                                  btnGarduTraksi.isActiveMenu = false
                                  btnInfo.isActiveMenu = false
-                                 btnHome.isActiveMenu = false
+                                 btnLogs.isActiveMenu = false
                                  stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
 
                              }
@@ -414,7 +447,7 @@ Window {
                                  btnBrake.isActiveMenu = false
                                  btnGarduTraksi.isActiveMenu = false
                                  btnInfo.isActiveMenu = false
-                                 btnHome.isActiveMenu = false
+                                 btnLogs.isActiveMenu = false
                                  stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
 
                              }
@@ -432,7 +465,7 @@ Window {
                                  btnBrake.isActiveMenu = true
                                  btnGarduTraksi.isActiveMenu = false
                                  btnInfo.isActiveMenu = false
-                                 btnHome.isActiveMenu = false
+                                 btnLogs.isActiveMenu = false
                                  stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
 
                              }
@@ -450,8 +483,8 @@ Window {
                                  btnBrake.isActiveMenu = false
                                  btnGarduTraksi.isActiveMenu = true
                                  btnInfo.isActiveMenu = false
-                                 btnHome.isActiveMenu = false
-                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
+                                 btnLogs.isActiveMenu = false
+                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-gardutraksi.qml"))
 
                              }
                          }
@@ -472,7 +505,7 @@ Window {
                             btnBrake.isActiveMenu = false
                             btnGarduTraksi.isActiveMenu = false
                             btnInfo.isActiveMenu = true
-                            btnHome.isActiveMenu = false
+                            btnLogs.isActiveMenu = false
                             stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
 
                         }
@@ -493,11 +526,14 @@ Window {
                     anchors.bottomMargin: 25
                     anchors.topMargin: 0
 
+
+
                     StackView {
                         id: stackView
                         anchors.fill: parent
                         clip: true
                         initialItem: Qt.resolvedUrl("qml/pages/homePage.qml")
+
                     }
                 }
 
@@ -549,7 +585,7 @@ Window {
                             id: image
                             opacity: 0.5
                             anchors.fill: parent
-                            source: "../images/svg_images/apps.svg"
+                            source: "images/svg_images/apps.svg"
                             anchors.leftMargin: 5
                             anchors.topMargin: 5
                             sourceSize.height: 16
@@ -647,6 +683,6 @@ Window {
 
 /*##^##
 Designer {
-    D{i:0;formeditorZoom:0.66}
+    D{i:0;formeditorZoom:3}D{i:17}
 }
 ##^##*/

@@ -6,14 +6,12 @@ import QtQml 2.3
 Button{
     id:btnleftMenu
     text: qsTr("Left Menu Text")
-    display: AbstractButton.TextBesideIcon
-    antialiasing: true
     property url btnIconSource: "../../images/svg_images/home.svg"
     property color  btnColorDefault: "#1c1d20"
     property color btnColorMouseOver: "#23272E"
     property color btnColorClicked: "#00a1f1"
-    property int iconWidth: 20
-    property int iconHeight: 20
+    property int iconWidth: 150
+    property int iconHeight: 150
     property color activeMenuColor: "#55aaff"
     property color activeMenuColorRight: "#2c313c"
     property bool isActiveMenu: false
@@ -28,12 +26,13 @@ Button{
                                    }
     }
 
-    implicitWidth: 100
-    implicitHeight: 60
+    implicitWidth: 200
+    implicitHeight: 150
 
     background: Rectangle{
         id: bgBtn
         color: internal.dynamicColor
+        radius: 10
 
         Rectangle{
             anchors{
@@ -65,39 +64,40 @@ Button{
         Image {
             id: iconBtn
             source: btnIconSource
-            anchors.leftMargin: 18
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: parent.left
+            anchors.rightMargin: 15
+            anchors.leftMargin: 15
+            anchors.bottomMargin: 15
+            anchors.topMargin: 15
             sourceSize.height: iconHeight
             sourceSize.width: iconWidth
-            height: iconHeight
-            width: iconWidth
-            fillMode: Image.PreserveAspectFit
-            visible: false
-            antialiasing: true
+            fillMode: Image.Stretch
+            visible: true
+            anchors.fill: parent
+            antialiasing: false
         }
 
-        ColorOverlay{
-            anchors.fill: iconBtn
-            source: iconBtn
-            color: "#ffffff"
-            antialiasing: true
-            height: iconHeight
-            width: iconWidth
-        }
+//        ColorOverlay{
+//            anchors.fill: iconBtn
+//            source: iconBtn
+//            color: "#ffffff"
+//            antialiasing: true
+//            height: iconHeight
+//            width: iconWidth
+//        }
 
-        Text{
-            color: "#ffffff"
-//            text: qsTr ("Home")
-            font: btnleftMenu.font
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: parent.left
-            anchors.leftMargin: 50
-    }
+//        Text{
+//            visible: false
+//            color: "#ffffff"
+//            text: btnleftMenu.text
+//            font: btnleftMenu.font
+//            anchors.verticalCenter: parent.verticalCenter
+//            anchors.left: parent.left
+//            anchors.leftMargin: 75
+//    }
   }
 }
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:1.25;height:60;width:70}
+    D{i:0;autoSize:true}D{i:6}
 }
 ##^##*/
