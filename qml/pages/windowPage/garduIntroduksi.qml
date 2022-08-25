@@ -13,6 +13,7 @@ import QtQml 2.3 //class yg dibutuhkan untuk QtObject
 //                }
 
 Item {
+    id: item1
     Rectangle{
         anchors.fill: parent
         color: "#2f3136"
@@ -22,10 +23,10 @@ Item {
         id: btnBack
         text: qsTr("Kembali")
         anchors.right: parent.right
-        anchors.bottom: parent.bottom
+        anchors.top: flowtest.bottom
+        anchors.topMargin: 20
         btnIconSource: "../../../images/go-back-arrow.png"
         anchors.rightMargin: 20
-        anchors.bottomMargin: 40
         onClicked: {
             stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-gardutraksi.qml"))
         }

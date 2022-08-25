@@ -22,9 +22,10 @@ Item {
             //            height: 40
             color: "white"
             anchors.verticalCenter: parent.verticalCenter
+            font.bold: true
             anchors.horizontalCenter: parent.horizontalCenter
-            textFormat: Text.RichText
-            font.pointSize: 24
+            textFormat: Text.AutoText
+            font.pointSize: 14
 
                 }
 
@@ -33,7 +34,7 @@ Item {
                 interval: 500;
                 repeat: true;
                 running: true;
-                triggeredOnStart: true //autostart
+//                triggeredOnStart: true //autostart
 
                 //fungsi untuk mendapatkan randomNumber
                 // Thanks to Yogi PNM untuk logika JS
@@ -59,6 +60,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:480;width:640}
+    D{i:0;height:0;width:0}
 }
 ##^##*/

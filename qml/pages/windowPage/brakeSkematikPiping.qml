@@ -35,9 +35,9 @@ Item {
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        anchors.rightMargin: 20
-        anchors.leftMargin: 20
-        anchors.bottomMargin: 150
+        anchors.rightMargin: 18
+        anchors.leftMargin: 18
+        anchors.bottomMargin: 106
         anchors.topMargin: 90
 
 
@@ -125,7 +125,7 @@ Item {
         anchors.bottom: parent.bottom
         btnIconSource: "../../../images/go-back-arrow.png"
         anchors.rightMargin: 20
-        anchors.bottomMargin: 40
+        anchors.bottomMargin: 30
         onClicked: {
             stackView.push(Qt.resolvedUrl("../../../qml/pages/Dasboard-brake.qml"))
         }
@@ -139,7 +139,7 @@ Item {
         anchors.right: btnBack.left
         anchors.bottom: parent.bottom
         btnIconSource: "../../../images/drawing.png"
-        anchors.bottomMargin: 40
+        anchors.bottomMargin: 30
         anchors.rightMargin: 40
         isActiveMenu: false
         onClicked: {
@@ -158,7 +158,7 @@ Item {
         anchors.right: btnSkematikKnorr.left
         anchors.bottom: parent.bottom
         btnIconSource: "../../../images/drawing.png"
-        anchors.bottomMargin: 40
+        anchors.bottomMargin: 30
         anchors.rightMargin: 40
         isActiveMenu: true
         onClicked: {
@@ -173,6 +173,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;height:720;width:1280}
+    D{i:0;autoSize:true;formeditorZoom:0.66;height:720;width:1280}
 }
 ##^##*/

@@ -67,6 +67,7 @@ Item {
                 Switch {
                     id: switchHome
                     width: 80
+                    Layout.fillHeight: true
                     checked: true
                     Layout.preferredWidth: 68
                     Layout.fillWidth: true
@@ -158,6 +159,6 @@ Item {
 
 /*##^##
 Designer {
-    D{i:0;autoSize:true;formeditorZoom:0.75;height:480;width:640}
+    D{i:0;autoSize:true;formeditorZoom:1.33;height:480;width:640}
 }
 ##^##*/

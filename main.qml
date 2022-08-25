@@ -285,7 +285,7 @@ Window {
                         onClicked: {
                             btnVibrasi.isActiveMenu = false
                             btnDoor.isActiveMenu = false
-                            btnLightning.isActiveMenu = false
+                            btnLighting.isActiveMenu = false
                             btnAC.isActiveMenu = false
                             btnBrake.isActiveMenu = false
                             btnGarduTraksi.isActiveMenu = false
@@ -310,7 +310,7 @@ Window {
                         onClicked: {
                             btnVibrasi.isActiveMenu = false
                             btnDoor.isActiveMenu = false
-                            btnLightning.isActiveMenu = false
+                            btnLighting.isActiveMenu = false
                             btnAC.isActiveMenu = false
                             btnBrake.isActiveMenu = false
                             btnGarduTraksi.isActiveMenu = false
@@ -386,7 +386,7 @@ Window {
                             onClicked: {
                                 btnVibrasi.isActiveMenu = true
                                 btnDoor.isActiveMenu = false
-                                btnLightning.isActiveMenu = false
+                                btnLighting.isActiveMenu = false
                                 btnAC.isActiveMenu = false
                                 btnBrake.isActiveMenu = false
                                 btnGarduTraksi.isActiveMenu = false
@@ -405,7 +405,7 @@ Window {
                             onClicked: {
                                 btnVibrasi.isActiveMenu = false
                                 btnDoor.isActiveMenu = true
-                                btnLightning.isActiveMenu = false
+                                btnLighting.isActiveMenu = false
                                 btnAC.isActiveMenu = false
                                 btnBrake.isActiveMenu = false
                                 btnGarduTraksi.isActiveMenu = false
@@ -418,20 +418,20 @@ Window {
 
 
                          LeftMenuButton {
-                             id: btnLightning
+                             id: btnLighting
                              width: leftMenu.width
                              text: qsTr("Lightning System")
                              btnIconSource: "images/btnlogo-lightning.png"
                              onClicked: {
                                  btnVibrasi.isActiveMenu = false
                                  btnDoor.isActiveMenu = false
-                                 btnLightning.isActiveMenu = true
+                                 btnLighting.isActiveMenu = true
                                  btnAC.isActiveMenu = false
                                  btnBrake.isActiveMenu = false
                                  btnGarduTraksi.isActiveMenu = false
                                  btnInfo.isActiveMenu = false
                                  btnLogs.isActiveMenu = false
-                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-door.qml"))
+                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-lighting.qml"))
 
                              }
                          }
@@ -443,13 +443,13 @@ Window {
                              onClicked: {
                                  btnVibrasi.isActiveMenu = false
                                  btnDoor.isActiveMenu = false
-                                 btnLightning.isActiveMenu = false
+                                 btnLighting.isActiveMenu = false
                                  btnAC.isActiveMenu = true
                                  btnBrake.isActiveMenu = false
                                  btnGarduTraksi.isActiveMenu = false
                                  btnInfo.isActiveMenu = false
                                  btnLogs.isActiveMenu = false
-                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-door.qml"))
+                                 stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-ac.qml"))
 
                              }
                          }
@@ -461,7 +461,7 @@ Window {
                              onClicked: {
                                  btnVibrasi.isActiveMenu = false
                                  btnDoor.isActiveMenu = false
-                                 btnLightning.isActiveMenu = false
+                                 btnLighting.isActiveMenu = false
                                  btnAC.isActiveMenu = false
                                  btnBrake.isActiveMenu = true
                                  btnGarduTraksi.isActiveMenu = false
@@ -479,7 +479,7 @@ Window {
                              onClicked: {
                                  btnVibrasi.isActiveMenu = false
                                  btnDoor.isActiveMenu = false
-                                 btnLightning.isActiveMenu = false
+                                 btnLighting.isActiveMenu = false
                                  btnAC.isActiveMenu = false
                                  btnBrake.isActiveMenu = false
                                  btnGarduTraksi.isActiveMenu = true
@@ -501,13 +501,13 @@ Window {
                         onClicked: {
                             btnVibrasi.isActiveMenu = false
                             btnDoor.isActiveMenu = false
-                            btnLightning.isActiveMenu = false
+                            btnLighting.isActiveMenu = false
                             btnAC.isActiveMenu = false
                             btnBrake.isActiveMenu = false
                             btnGarduTraksi.isActiveMenu = false
                             btnInfo.isActiveMenu = true
                             btnLogs.isActiveMenu = false
-                            stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/Dasboard-brake.qml"))
+                            stackView.push(Qt.resolvedUrl("../qtquick_hmidisplay_percobaan1/qml/pages/aboutUs.qml"))
 
                         }
                     }

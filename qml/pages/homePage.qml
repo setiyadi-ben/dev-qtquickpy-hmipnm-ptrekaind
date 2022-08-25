@@ -20,7 +20,7 @@ Item {
             opacity: 1
             anchors.fill: parent
             source: "../../images/HOMEPAGE.png"
-            //            source: "../../images/Karir-4.jpg"
+//            source: "../../images/Karir-4.jpg"
             fillMode: Image.Stretch
         }
 

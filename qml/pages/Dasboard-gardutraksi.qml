@@ -79,7 +79,7 @@ Item {
                 btnSkematik.isActiveMenu = false
                 btnLayout.isActiveMenu = false
                 btnControl.isActiveMenu = true
-                stackView.push(Qt.resolvedUrl("../pages/windowPage/garduControl.qml"))
+                stackView.push(Qt.resolvedUrl("../pages/windowPage/garduControl2.qml"))
 
             }
         }
